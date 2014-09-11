@@ -1,0 +1,7 @@
+{% extends "login.html" %}
+{% load static %}
+
+{% block client_rightblock %}
+	<h2>That is an invalid password/username combination.</h2>
+	<p>Click <a href = "/accounts/login/">here</a> to try again.</p>
+{% endblock %}

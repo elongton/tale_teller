@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet_home.css" %}">
+{% endblock %}
+
+
+{% block center_material %}
+	<div id = "center_block">
+	</div>
+
+	<div id = "right_block">
+		<!--
+			<div id = "goodreads_title"> 	
+				<a href = "http://www.goodreads.com/"><img id = "goodreads_logo" style = "max-width: 100%; max-height:100%;" src = "goodreads_logo.png"/></a>
+			</div>
+		-->
+		<!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+		  <div id="gr_custom_widget_1387168313">
+			  <div class="gr_custom_container_1387168313">
+		<h2 class="gr_custom_header_1387168313">
+		<a id = "feed_color" href="https://www.goodreads.com/review/list/26527306-laurel-smith?shelf=reviewed-books&amp;utm_medium=api&amp;utm_source=custom_widget" style="text-decoration: none;">Laurel's Reviews</a>
+		</h2>
+		  <div class="gr_custom_each_container_1387168313">
+			  <div class="gr_custom_book_container_1387168313">
+				<a href="https://www.goodreads.com/review/show/787676643?utm_medium=api&amp;utm_source=custom_widget" title="World War Z: An Oral History of the Zombie War"><img alt="World War Z: An Oral History of the Zombie War" border="0" src="https://d202m5krfqbpi5.cloudfront.net/books/1386328204s/8908.jpg" /></a>
+			  </div>
+			  <div class="gr_custom_rating_1387168313">
+				<img alt="5 of 5 stars" class=" staticStars" src="https://www.goodreads.com/images/layout/stars/red_star_5_of_5.png" title="5 of 5 stars, it was amazing" />
+			  </div>
+			  <div class="gr_custom_title_1387168313">
+				<a id = "feed_color" href="https://www.goodreads.com/review/show/787676643?utm_medium=api&amp;utm_source=custom_widget">World War Z: An Oral History of the Zombie War</a>
+			  </div>
+			  <div class="gr_custom_author_1387168313">
+				by <a id = "feed_color" href="https://www.goodreads.com/author/show/5791.Max_Brooks">Max Brooks</a>
+			  </div>
+			  <div class="gr_custom_review_1387168313">
+				This novel surprised me. I didn't think I would find a zombie novel that really offered a new perspective. Max Brooks achieved this revelation by leaving behind the cliches of the horror genre, and instead focusing on modern realism. His...
+			  </div>
+		  </div>
+		  <div class="gr_custom_each_container_1387168313">
+			  <div class="gr_custom_book_container_1387168313">
+				<a href="https://www.goodreads.com/review/show/787677809?utm_medium=api&amp;utm_source=custom_widget" title="Pride and Prejudice and Zombies"><img alt="Pride and Prejudice and Zombies" border="0" src="https://d202m5krfqbpi5.cloudfront.net/books/1320398407s/6508774.jpg" /></a>
+			  </div>
+			  <div class="gr_custom_rating_1387168313">
+				<img alt="3 of 5 stars" class=" staticStars" src="https://www.goodreads.com/images/layout/stars/red_star_3_of_5.png" title="3 of 5 stars, liked it" />
+			  </div>
+			  <div class="gr_custom_title_1387168313">
+				<a id = "feed_color" href="https://www.goodreads.com/review/show/787677809?utm_medium=api&amp;utm_source=custom_widget">Pride and Prejudice and Zombies</a>
+			  </div>
+			  <div class="gr_custom_author_1387168313">
+				by <a id = "feed_color" href="https://www.goodreads.com/author/show/169377.Seth_Grahame_Smith">Seth Grahame-Smith</a>
+			  </div>
+			  <div class="gr_custom_review_1387168313">
+				As a fan of Jane Austen and as an English major I really wanted to hate this book for destroying the purity of Austen's world. However, I can't help but say that there were moments when I was laughing quite heartily. It's true that much ...
+			  </div>
+		  </div>
+		  <div class="gr_custom_each_container_1387168313">
+			  <div class="gr_custom_book_container_1387168313">
+				<a href="https://www.goodreads.com/review/show/787677939?utm_medium=api&amp;utm_source=custom_widget" title="Fool"><img alt="Fool" border="0" src="https://d202m5krfqbpi5.cloudfront.net/books/1347317016s/3684856.jpg" /></a>
+			  </div>
+			  <div class="gr_custom_rating_1387168313">
+				<img alt="5 of 5 stars" class=" staticStars" src="https://www.goodreads.com/images/layout/stars/red_star_5_of_5.png" title="5 of 5 stars, it was amazing" />
+			  </div>
+			  <div class="gr_custom_title_1387168313">
+				<a id = "feed_color" href="https://www.goodreads.com/review/show/787677939?utm_medium=api&amp;utm_source=custom_widget">Fool</a>
+			  </div>
+			  <div class="gr_custom_author_1387168313">
+				by <a id = "feed_color" href="https://www.goodreads.com/author/show/16218.Christopher_Moore">Christopher Moore</a>
+			  </div>
+			  <div class="gr_custom_review_1387168313">
+				This is quite possibly the most vulgar book I've ever read- and I absolutely loved it. Christopher Moore is one of my favorite authors, and his take on King Lear, my favorite Shakespeare play, was a must read. 
+	Moore tells his story from...
+			  </div>
+		  </div>
+		  <br style="clear: both"/>
+		  <center>
+			<a href="https://www.goodreads.com/"><img alt="goodreads.com" src="https://www.goodreads.com/images/widget/widget_logo.gif" style="border:0" /></a>
+		  </center>
+		  <noscript>
+			Share <a href="https://www.goodreads.com/">book reviews</a> and ratings with Laurel, and even join a <a href="https://www.goodreads.com/group">book club</a> on Goodreads.
+		  </noscript>
+		  </div>
+
+		  </div>
+		  <!-- <script src="https://www.goodreads.com/review/custom_widget/26527306.Laurel's%20Reviews?cover_position=middle&cover_size=small&num_books=5&order=a&shelf=reviewed-books&show_author=1&show_cover=1&show_rating=1&show_review=1&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=&widget_border_width=1&widget_id=1387168313&widget_text_color=000000&widget_title_size=medium&widget_width=medium" type="text/javascript" charset="utf-8"></script>							 -->
+	</div>	
+
+
+
+
+	<div id = "content_block">	
+			<div id = "quote_container">
+				<img id = "yeats_quote" src="{% static "images/yeats_quote.png"%}" style="border:0" />
+			</div>
+			<p class = "notes" id = "1st_paragraph">
+			We are the Tellers of Tales. Each of us has a story burning within, but finding the right forum can seem impossible. Preparing a story for publication, whether it is a short story, novel or anything in between, can be a daunting project. Facing the prospect of rejection is no easy task. We can't promise to protect you from publishers' rejections. We can promise to support you so that you can stand proud in the knowledge that you gave them the best possible version of your stories.
+			</p>
+			<p class = "notes" id = "second_paragraph">
+			We ask that you allow us the honor of helping bring your story to life. Be willing to hand us that piece of your mind and heart you&#39ve put to paper and let us help you polish it. 
+			</p>
+			<p class = "notes" id = "third_paragraph">
+			Tellers of Tales works with fiction writers to improve their writing creatively and editorially by establishing one-on-one relationships with authors. We provide creative workshops and exercises, detailed editing services and even some help with marketing and promotion. The ultimate goal—to help every person with the drive and desire to become a Teller of Tales.
+			</p>
+	</div>	
+	
+{% endblock %}
+
+
+
+

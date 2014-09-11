@@ -1,0 +1,243 @@
+#content_block{
+float: left;
+margin-top:100px;
+background-color:#F5F2E9;
+z-index:1;
+width:920px;
+position:absolute;
+left:50%;
+margin-left:-460px;
+position:relative;
+/* border:1px dashed black; */
+}
+
+#right_block{
+background-color: #F5DC8A;
+height:1000px;
+width:200px;
+float: right;
+margin-top:2px;
+margin-right:-10px;
+position:relative;
+z-index: 2;
+}
+
+#lead_para{
+height:500px;
+/* margin-left:50px; */
+margin-bottom:800px;
+margin-top: 10px;
+margin-right: 50px;
+}
+
+#title_pic{
+position: absolute;
+margin-left: -357px;
+}
+
+.panel{
+text-decoration:none;
+color: black;
+display:block;
+width:100%
+}
+
+.panel:hover{
+background-color:#5A3314;
+}
+
+
+.divpanel{
+	position: absolute;
+	height: 500px;
+	width: 95%;
+	margin-left: 30px;
+	margin-right:50px;
+	margin-top: 10px;
+	display: none;
+	z-index: 1;
+	border-radius:10px;
+}
+
+#container{
+height:500px;
+/* margin-left:50px; */
+margin-top: 10px;
+margin-right: 50px;
+}
+
+#right_block, #container{
+overflow: hidden;
+}
+#constant_block{
+border: 1px dashed red;
+margin-bottom: 100px;
+margin-top:100px;
+height:200px;
+}
+
+#scroll_end{
+max-height: 100%;
+}
+
+.left_scroll{
+float: left;
+height: 500px;
+margin-top: 0px;
+margin-left: -25px;
+
+}
+.right_scroll{ 
+float: right;
+margin-top: 0px;
+margin-right: -10px;
+height:500px;
+float: right;
+
+position: relative;
+}
+
+.scroll_content{
+position: relative;
+float: left;
+}
+
+.pics_text{
+position: absolute;
+width: 500px;
+
+margin-top: 85px;
+margin-left: -220px;
+left: 50%;
+}
+.text_box{
+width: 400px;
+
+margin-right: 50%;
+position: relative;
+right: 75px;
+}
+
+#kay_pic{
+
+width: 150px;
+margin: 0 auto;
+}
+#kay_name{
+
+width: 150px;
+margin: 0 auto;
+font-family: Centaur;
+margin-top:25px;
+text-align: center;
+font-size: 20px;
+}
+
+.photo{
+margin-top: 5px;
+max-width: 100%;
+border-radius:10px;
+box-shadow: 3px 3px 5px #888888;
+}
+
+.header_text{
+font-family: 'Fredericka the Great', cursive;
+}
+
+.info_text{
+margin-left: 15px;
+font-family: Centaur;
+font-size: 17px;
+margin-right: 5px;
+}
+
+#pen_pic{
+width: 50px;
+}
+#fountain_pen{
+float: right;
+}
+
+#izzy_brynn_box{
+position: relative;
+width: 500px;
+left: 50%;
+margin-left: -250px;
+}
+#izzy_brynn_cover{
+max-width: 100%;
+border: 1px solid black;
+}
+
+#boredom{
+font-family: 'Fredericka the Great', cursive;
+text-align: center;
+font-size: 25px;
+margin-top: 25px;
+}
+
+#sirens_header{
+font-family: 'Fredericka the Great', cursive;
+font-size: 50px;
+margin-top: -5px;
+
+}
+
+#siren_descrip{
+height: 200px;
+width: 500px;
+border: 1px dashed black;
+margin-left: 20px;
+margin-top: -25px;
+border-radius: 5px;
+
+}
+
+#series_des{
+margin-top: -2px;
+}
+
+.like_button{
+width: 85px;
+}
+
+
+
+#rhine_button{
+max-width: 100%;
+margin-top: 10px;
+margin-left: 20px;
+}
+
+#rhine_button:hover{
+box-shadow: -1px 6px 10px #555555;
+}
+
+
+#iz-br_button{
+max-width: 100%;
+margin-top: 10px;
+margin-left: 5px;
+}
+
+#iz-br_button:hover{
+box-shadow: -1px 6px 10px #555555;
+}
+
+#not_for_sale_box{
+position: relative;
+width: 200px;
+float: left;
+margin-right: 10px;
+}
+#not_for_sale{
+max-width: 100%;
+border:1px solid black;
+}
+
+#not_for_sale_des{
+font-family: 'Fredericka the Great', cursive;
+font-size: 25px;
+}
+
+

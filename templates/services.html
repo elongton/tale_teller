@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block head %}
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet_services.css" %}">
+{% endblock %}
+
+{% block center_material %}
+
+		<div id = "center_block">
+		</div>
+		<div id = "right_block">
+			{% if submitted == 1 %}
+				<div id = "formlist" class = "response_div">
+					<h2 id = "request_response"> Thank you for contacting Tellers of Tales! You will receive an email once your sample has been reviewed, including information on how to log in and view our client-exclusive features.</h2>
+				</div>
+			{% else %}
+				<div id = "formlist">
+					<form id = "fillinform" action = "/services/" method = "post" enctype = "multipart/form-data">{% csrf_token %}
+						<ul>
+							{{form.as_p}}
+							<input type = "submit" name = "submit" value = "Submit">
+						</ul>
+					</form>
+				</div>
+			{%endif%}		
+		</div>
+
+		<div id = "content_block">	
+
+			<p class = "notes" id = "intro_para"> 
+				<span id = "intro_letter">F</span>or Tellers of Tales, it is important to us that we provide the support you need to become a successful and satisfied writer. In order to accomplish this goal we have devised a variety of services that we can tailor to fit your needs. What follows is a description of those services. When you contact us, please include a sample of your work (just 1-2 pages) so that we can show you what we do! We will return your work with a suggestion of what services would best help develop your writing. If you already have an idea of what you would like help with, let us know; we would be happy to accommodate you.
+			</p>
+			
+			<p class = "notes" id = "top_link_para">
+				<span class = "navlinks" id = "IE_link" >Independent Editing</span> &#8226
+				<span class = "navlinks" id = "CC_link" >Creative Consulting </span> &#8226
+				<span class = "navlinks" id = "MP_link" >Marketing and Promotion </span> &#8226
+				<span class = "navlinks" id = "P_link" >Pricing </span>
+			</p>
+					
+			
+			<h2 class = "text_titles" id = "ind_editing">Independent Editing</h2>
+			
+			<p class = "notes" id = "lead_title">
+			Lead Editor: Laurel Smith
+			</p>
+			
+			<p class = "notes"> 
+			Even great authors appreciate the input of their editors. Just look at the acknowledgements page of nearly any novel and you will find the editor&#39s name nestled along side those of the author&#39s friends and family. Usually authors are put in contact with editors through their publishers. However, with the rise of self-publishing this highly-beneficial relationship has gone un-nurtured. There are so many wonderful self-published stories that suffer from egregious grammar errors and even problems of plot consistency and under-developed characters. Oftentimes all these stories need is a little more attention and feedback from other people involved in the publishing industry in order to achieve greatness.
+			</p>
+			<p class = "notes"> 
+			As an independent editor I work without the input (and often without the bias) of publishing companies. It is my goal to help those writers who are interested in self-publishing or who simply want to put their best foot forward when applying for publication. I establish one-on-one relationships with writers and work intensively with their stories so that there is no fear of letting imperfect work into the world.
+			</p>
+			<p class = "notes"> 
+			There are three basic services that I provide depending on the current status of your writing:
+			</p>
+			<p class = "notes" id = "indent"> 
+			<span id = "sub_titles">Developmental Editing</span>: This includes working on plot consistancy, character development, pacing, and thematic elements. We can work on developmental editing whether you have a finished novel or an incomplete draft. If you are having problems with writers block I would direct you to our creative consulting services.
+			</p>
+			<p class = "notes" id = "indent">
+			<span id = "sub_titles">Line Editing</span>: Once you have a complete, well-developed story we can focus on specific, sentence-level editing. Here we will focus on individual sentence structure, word use, dialogue and prose flow. This is a much more detail-oriented look at your story that should refine your writing for publication.
+			</p>
+			<p class = "notes" id = "indent">
+			<span id = "sub_titles">Copy Editing</span>: Copy editing is for stories that have already undergone extensive editing and are ready for finishing touches. We will look at grammar, formating and typographic errors. This service is best suited for writers looking to self-publish, since most reputable publishing companies employ a copy editor.
+			<br><span class ="topreturn">Return to top</span>
+			</p>
+	
+			<p class = "notes"> 
+			</p>
+			
+			
+			
+			<h2 class = "text_titles" id = "crea_consult">Creative Consulting</h2>
+			
+			<p class = "notes" id = "lead_title">
+			Lead Creative Consultant: Kaylynne Spauls
+			</p>
+			<p class = "notes">
+			I have always been incredibly good at recognizing potential. Show me your writing and I will work to open your mind and help you create. Writers run into periods when they just can&#39t seem to make their stories flow together. Maybe you&#39re having trouble creating an ending or staying consistent . I will work with you to fix these problems. 
+			</p>
+			<p class = "notes">
+			Some may feel this is cheating. That writing should be your own, and you shouldn&#39t take help from others. Rest assured- the writing is your own. I&#39m just here to help you use it. If you are more comfortable working in a group, we will use creative workshops to help you reignite the creative fuel. 
+			</p>
+			<p class = "notes">
+			Some strategies that I use to ignite your creativity include:
+			</p>
+			<p class = "notes" id = "indent">
+			<span id = "sub_titles">Story Boarding</span>: Sometimes you just need to hammer out how the story will go, and the rest comes naturally. Once the dots are connected it&#39s easier to keep from repeating yourself or getting off course. 
+			</p>
+			<p class = "notes" id = "indent">
+			<span id = "sub_titles">Character Development</span>: Sometimes what is lacking are characters that the reader can relate to. The story can&#39t survive without emotional attachment to the people within. Together we can isolate where the characters can be improved so that the reader feels that the unicorn-riding dragon slayer is 	someone they could meet in the real world.
+			</p>
+			<p class = "notes" id = "indent">
+			<span id = "sub_titles">Creative Workshops</span>: Either one-on-one or in a group, sometimes we just need a little help getting back on track. There is a long-standing tradition in the writing community of relying on others to help improve the quality of writing. Being able to build on ideas and draw from different perspectives can often lead to beautifully complex stories.
+			</p>
+			<p class = "notes" id = "indent">
+			<span id = "sub_titles">School Visits</span>: As an author, I am very willing to travel and discuss the writing process with students to help encourage young generations. I am willing to conduct writing workshops or school readings or my personal stories. When a child meets an author it&#39s a special connection and they often feel more inspired to read or write after. This in turn not only leads the child to improve their literacy skills, but also can provide an outlet for their creativity that can be very difficult to tap into.
+			<br><span class ="topreturn">Return to top</span>
+			</p>
+			
+
+			<h2 class = "text_titles" id = "mark_pro">Marketing and Promotion</h2>
+			
+			<p class = "notes"> 
+			If you are a new author seeking to spread your name in the literary world, consider including our promotion services. We can help you get started with online and on-location promotion once you have completed your story. If you are an established author looking for help with promotion this probably isn't the service you need.We are focused on helping people who need to get started with the basics, and are not a marketing company.
+			</p>
+
+			<h2 class = "text_titles" id = "pricing">Pricing</h2>
+			
+			<p class = "notes" id = "last_para"> 
+			Pricing will vary depending on what services you would like to employ and what your deadline is. Most short stories or picture books will incur a flat fee. Editing for novels and novellas will be priced on a per page basis, generally ranging from $1- $10 per page. When you send us your sample writing we will also give you an estimate of what the specific price will be. But remember, we will look at your sample for free, so there is nothing to lose!
+			<br><span class = "topreturn">Return to top</span>
+			</p>
+			
+		</div>
+{% endblock %}

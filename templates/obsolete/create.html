@@ -1,0 +1,47 @@
+{% extends "login.html" %}
+{% load static %}
+
+{% block alltheinfo %}
+	<h2>Create User</h2>
+		<form action = "/accounts/usercreation/" method = "post">{%csrf_token %}
+		
+		<label for = "username"> Username:</label>
+		<br>
+		<input type = "text" name = "username" value=""id = "username">
+		
+		<br>
+		<label for = "firstname"> First Name:</label>
+		<br>
+		<input type = "text" name = "firstname" value=""id = "firstname">
+		
+		<br>
+		<label for = "lastname">Last Name:</label>
+		<br>
+		<input type = "text" name = "lastname" value = "" id = "lastname">	
+		
+		<br>
+		<label for = "email">Email:</label>
+		<br>
+		<input type = "email" name = "email" value="" id = "email">
+		
+		<br>
+		<label for = "password1">Password:</label>
+		<br>
+		<input type = "password" name = "password1" value = "" id = "password1">	
+
+		<br>
+		<label for = "password2">Confirm Password:</label>
+		<br>
+		<input type = "password" name = "password2" value = "" id = "password2">	
+		
+
+
+
+
+
+
+
+		<br>
+		<input type = "submit" value = "Submit" />
+	</form>
+{% endblock %}

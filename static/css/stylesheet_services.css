@@ -1,0 +1,178 @@
+#content_block{
+float: left;
+margin-top:200px;
+background-color:#F5F2E9;
+z-index:1;
+width:920px;
+position:absolute;
+left:50%;
+margin-left:-460px;
+position:relative;
+/* border:1px dashed black; */
+}
+
+#right_block{
+background-color: #F5DC8A;
+height:2200px;
+width:250px;
+float: right;
+margin-top:2px;
+margin-right:-10px;
+position: relative;
+}
+
+
+
+#id_message{
+    width: 210px;
+    height: 100px;
+}
+
+.errorlist{
+margin-bottom:-10px;
+margin-top:-10px;
+
+}
+
+#id_services_required{
+
+}
+
+#formlist{
+position:absolute;
+max-width: 250px;
+}
+
+
+
+#goodreads_title{
+
+height:50px;
+vertical-align:middle;
+text-align:center;
+padding-top:20%;
+}
+#goodreads_logo{
+height:25px;
+width:117px;
+display:inline-block;
+text-align:center;
+vertical-align:middle;
+padding:2px;
+}
+
+#topRSS{
+margin-top:20px;
+}
+.RSS_box{
+margin-top:60px;
+height:100px;
+border: 1px dashed black;
+border-radius: 10px;
+vertical-align:middle;
+text-align:center;
+}
+
+
+#pricing{
+margin-left:50px;
+height:70px;
+}
+
+#contactform{
+height:300px;
+}
+
+#top_link_para{
+margin-top:0px;
+margin-left:50px;
+margin-bottom:20px;
+}
+
+#link_para{
+margin-top:-15px;
+margin-left:50px;
+margin-bottom:20px;
+}
+
+#intro_para{
+height:150px;
+margin-left:50px;
+margin-bottom:20px;
+}
+
+.navlinks{
+text-decoration: underline;
+font-size: 14px;
+color: #4F2D12
+}
+
+.topreturn{
+text-decoration: underline;
+font-size: 14px;
+color: #4F2D12
+
+}
+#titlelink{
+font-size: 16px;
+text-decoration: none;
+color: #4F2D12
+}
+
+/*
+#intro_letter{
+font-size: 40px;
+font-family: Centaur;
+}
+
+*/
+
+#lead_title{
+font-style: italic;
+}
+
+#sub_titles{
+font-style: italic;
+}
+
+.text_titles{
+font-family:Centaur, Times;
+margin-left:50px;
+}
+.notes{
+border-radius: 5px;
+margin-left:70px;
+margin-right:65px;
+}
+
+#indent{
+margin-left:90px;
+}
+
+#last_para{
+
+margin-bottom:100px;
+}
+
+#fillinform{
+margin-left:-20px;
+
+}
+
+  #feed_color{
+  color:#4F2D12;
+  }
+  
+  #request_response{
+    color:#4F2D12;
+	font-family: centaur;
+  }
+  
+  .response_div{
+  margin-left: 20px;
+  margin-right: 20px; 
+  
+  }
+
+
+

@@ -1,0 +1,140 @@
+
+#right_block{
+background-color: #F5DC8A;
+height:1000px;
+width:250px;
+float: right;
+margin-top:2px;
+margin-right:-10px;
+position:relative;
+}
+
+
+#content_block{
+float: left;
+margin-top:100px;
+background-color:#F5F2E9;
+z-index:1;
+width:920px;
+position:absolute;
+left:50%;
+margin-left:-460px;
+position:relative;
+/* border:1px dashed black; */
+}
+
+
+#goodreads_title{
+
+height:50px;
+vertical-align:middle;
+text-align:center;
+padding-top:20%;
+}
+#goodreads_logo{
+height:25px;
+width:117px;
+display:inline-block;
+text-align:center;
+vertical-align:middle;
+padding:2px;
+border: 1px dashed black;
+}
+
+#top_book{
+margin-top:20px;
+}
+
+.bookcover{
+max-height:100%;
+max-width:100%;
+box-shadow: 6px 6px 5px #888888;
+border-radius:5px;
+}
+
+.bookcover_box{
+margin-top:60px;
+height:150px;
+
+border-radius: 10px;
+vertical-align:middle;
+text-align:center;
+
+}
+
+
+#profile1_box{
+float: left;
+height:150px;
+margin-right:10px;
+margin-bottom: 100px;
+
+}
+#profile1{
+max-height:100%;
+max-width:100%;
+border-radius:10px;
+box-shadow: 3px 3px 5px #888888;
+}
+
+#profile2_box{
+float: right;
+height:150px;
+}
+#profile2{
+max-height:100%;
+max-width:100%;
+border-radius:10px;
+box-shadow: 3px 3px 5px #888888;
+}
+
+#right_author{
+float:right;
+margin-right:10px;
+
+}
+
+#profile3_box{
+float: left;
+height:150px;
+margin-right:10px;
+
+}
+#profile3{
+max-height:100%;
+max-width:100%;
+border-radius:10px;
+box-shadow: 3px 3px 5px #888888;
+}
+
+#thirdbox{
+margin-bottom:50px;
+
+}
+
+#authorlink{
+text-decoration: none;
+color: black;
+}
+
+#authorlink:hover{
+color: #987A26;
+}
+
+
+.text_titles{
+font-family:Centaur, Times;
+margin-left:10px;
+}
+.notes{
+border:1px dashed #F5F2E9;
+border-radius: 5px;
+margin-left:50px;
+margin-right:50px;
+margin-top:40px;
+height:300px;
+}
+.author_name{
+font-family:Centaur;
+
+}

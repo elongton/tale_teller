@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+
+{% block table %}
+	<table id = "header_table">
+		<tr>
+			<td rowspan = "2" id = "img_cell">
+				<a href = "/home/"><img id = "logo" src = "{% static "images/icon.png"%}"/></a>
+			</td> 
+			<td class = "toprow"></td>
+			<td colspan = "3" class = "toprow" id = "title_cell"><div id = "big_title"><img id = "title_pic" src = "{% static "images/title_text.png"%}"/></div></td>
+		</tr>
+		
+		
+		<tr class = "bottomrow1">
+			<td class = "bottomrow">
+				<span class = "panel" id = "#target1" href = ""><div class =  "title_text">About</div></a>
+			</td>
+			
+			<td class = "bottomrow">
+				<span class = "panel" id = "#target2" href = ""><div class =  "title_text">Sirens of Rhine</div></a>
+			</td>
+			
+			<td class = "bottomrow">
+				<span class = "panel" id = "#target3" href = ""><div class =  "title_text">Izzy & Brynn</div></a>
+			</td>
+			
+			<td class = "bottomrow">
+				<span class = "panel" id = "#target4" href = ""><div class =  "title_text">Not For Sale</div></a>
+			</td>
+		</tr>
+	</table>
+{% endblock %}
+
+
+
+{% block center_material %}
+
+	<div id = "center_block">
+	</div>
+	
+	<div id = "right_block">
+			<div id = "kay_name">
+				Kaylynne Spauls
+			</div>
+			<div id = "kay_pic">
+				<img class = "photo" src = "{% static "images/kay_spauls_2.jpg"%}" style="border:0" />
+			</div>		
+	</div>
+
+	<div id = "content_block">
+		<div id = "container">
+			<div class="divpanel" id="target1">
+			
+				<div class = "scroll_content">
+					<div class = "left_scroll">
+						<img id = "scroll_end" src = "{% static "images/left_scroll.png"%}" style="border:0" />
+					</div>
+					<div class = "pics_text">
+						<div id= "fountain_pen"><img id = "pen_pic" src ="{% static "images/fountain_pen.png"%}" /></div>
+						<h2 class = "header_text">About Kay</h2>
+						<p class = "info_text">
+							"I am the Teller of Tales."
+							<br><br>I write fantasy for Adults and Children. I live in Raleigh NC, with my wonderful husband and I'm hard at work on the rest of original series'!  I also love to read, play video games, cook, watch movies, go for walks, and obviously write.
+							<br><br>I have worked with children since I was 16 and I absolutely love it. I have three and soon to be four nephews that I adore. I also work every summer at a Harry Potter themed girl-scout camp that is one of the most rewarding experiences I've ever had each time I go.
+						</p>
+					</div>
+				</div>
+
+				<div class = "right_scroll">
+					<img id = "scroll_end" src = "{% static "images/right_scroll.png"%}" style="border:0" />
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="divpanel" id="target2">
+			
+				<div class = "scroll_content">
+						<div class = "left_scroll">
+							<img id = "scroll_end" src = "{% static "images/left_scroll.png"%}" style="border:0" />
+						</div>
+						<div class = "pics_text">
+						<p id = "sirens_header">The Sirens of Rhine</p>
+						<div id = "siren_descrip">
+							<p id = "series_des">Description of series.</p>
+						</div>
+							<div class = "like_button"><a href = "https://www.facebook.com/TheSirensOfRhine"><img  id = "rhine_button" src = "{% static "images/like.png"%}" /></a></div>
+						</div>
+				</div>
+
+				<div class = "right_scroll">
+						<img id = "scroll_end" src = "{% static "images/right_scroll.png"%}" style="border:0" />
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<div class="divpanel" id="target3">
+			
+				<div class = "scroll_content">
+					<div class = "left_scroll">
+						<img id = "scroll_end" src = "{% static "images/left_scroll.png"%}" style="border:0" />
+					</div>
+					<div class = "pics_text">	
+						<div id = "izzy_brynn_box"><img id = "izzy_brynn_cover" src = "{% static "images/izzy_brynn_banner.png"%}"/></div>
+						<p id = "boredom" >Boredom isn't an option when you dare to believe in the impossible!</p>
+						<div>
+							<div class = "like_button"><a href = "https://www.facebook.com/IzzyandBrynn"><img  id = "iz-br_button" src = "{% static "images/like.png"%}" /></a></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class = "right_scroll">
+					<img id = "scroll_end" src = "{% static "images/right_scroll.png"%}" style="border:0" />
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="divpanel" id="target4">
+			
+				<div class = "scroll_content">
+					<div class = "left_scroll">
+						<img id = "scroll_end" src = "{% static "images/left_scroll.png"%}" style="border:0" />
+					</div>
+					<div class = "pics_text">
+						<div id = "not_for_sale_box"><img id = "not_for_sale" src = "{% static "images/not_for_sale.jpg"%}"/></div>
+						<p id = "not_for_sale_des">The Sirens of Rhine focuses heavily on Human Trafficking, and through my research on the topic I have become very passionate about raising awareness. Below is some information about the campaign NOT FOR SALE. I have also provided a link to the store that supports the cause. </p>
+					
+					</div>
+				</div>
+
+				<div class = "right_scroll">
+					<img id = "scroll_end" src = "{% static "images/right_scroll.png"%}" style="border:0" />
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="divpanel" id="target5">Reviews</div>
+			<div class="divpanel" id="target6">Contact</div>
+			<div class="divpanel" id="target7">More</div>
+		</div>
+		
+		
+		<div id = "constant_block">
+			Follow me on: Facebook, Twitter, Google+
+		</div>
+	</div>
+	
+	
+{% endblock %}
+
+
+
+
+<!-- <div class = "text_box">
+	<p>
+	"I am the teller of tales."
+	<br><br>I write fantasy for Adults and Children. I live in Raleigh NC, with my wonderful husband and I'm hard at work on the rest of original series'!
+	<br><br>I also love to read, play video games, cook, watch movies, go for walks, and obviously write.
+	<br><br>I have worked with children since I was 16 and I absolutely love it. I have three and soon to be four nephews that I adore. I also work every summer at a harry potter themed girl-scout camp that is one of the most rewarding experiences I've ever had each time I go.
+	</p>
+</div> -->
+{% block head %}
+    <link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet_kaylynnespauls.css" %}">
+    <script type = 'text/javascript' src = "{% static "jss/script_kaylynnespauls.js"%}"></script>
+    <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+
+
+    <style media="screen" type="text/css">
+        .divpanel{
+        background: url('{% static "images/scroll_body.png" %}') center repeat;
+        }
+    </style>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html> 
+
+	<head> 
+		<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+		<script type = 'text/javascript' src = "{% static "jss/jquery.animate-colors-min.js"%}"></script>
+		<script type = 'text/javascript' src = "{% static "jss/jquery.scrollTo.js"%}"></script>
+		<script type = 'text/javascript' src = "{% static "jss/jquery.scrollTo.min.js"%}"></script>
+		<script type = 'text/javascript' src = "{% static "jss/script.js"%}"></script>
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet.css" %}">
+		{% block head %}
+		{% endblock %}
+		<title>
+		Tellers Of Tales
+		</title>
+		<link rel="shortcut icon" href="{% static "images/tab_icon5.png" %}">
+	</head>
+	
+	
+	<body>	
+		<script src="jquery.js"></script>
+
+		<div id = "top_block" style = "background:url('{% static "images/leather_header3.jpg" %}') center repeat">
+			<div id = "header_block">
+				{% block table %}
+					<table id = "header_table">
+						<tr>
+							<td rowspan = "2" id = "img_cell">
+								<a href = "/home/"><img id = "logo" src = "{% static "images/icon.png"%}"/></a>
+							</td> 
+							<td class = "toprow"></td>
+							<td colspan = "4" class = "toprow" id = "title_cell"><div id = "big_title"><img id = "title_pic" src = "{% static "images/title_text.png"%}"/></div></td>
+						</tr>
+						
+						
+						<tr class = "bottomrow1">
+							<td class = "bottomrow">
+								<a class = "headerlinks" href = "/home/"><div class =  "title_text">Home</div></a>
+							</td>
+							
+							<td class = "bottomrow">
+								<a class = "headerlinks" href = "/bio/"><div class =  "title_text">Who we are</div></a>
+							</td>
+							
+							<td class = "bottomrow">
+								<a class = "headerlinks" href = "/testimonials/"><div class =  "title_text">Testimonials</div></a>
+							</td>
+							
+							<td class = "bottomrow">
+								<a class = "headerlinks" href = "/services/"><div class =  "title_text">Services</div></a>
+							</td>
+							
+							<td class = "bottomrow" id = "resource_button">
+								<a class = "headerlinks" href = "/resources/"><div class =  "title_text">Resources</div></a>
+							</td>
+							
+							<td class = "bottomrow" id = "login_button">
+							
+								{% if loggedin %}
+									<a class = "headerlinks" href = "/clients/"><div class =  "title_text">Clients</div></a>
+								{% else %}
+									<a class = "headerlinks" href = "/accounts/login/"><div class =  "title_text">Clients</div></a>
+								{%endif%}
+								
+								
+							</td>
+						</tr>
+					</table>
+				{% endblock %}
+			</div>	
+		</div>
+			
+			
+		{% block center_material %}
+		{%endblock%}
+			
+			
+		<div id = "footer_block" style = "background:url('{% static "images/leather_header3.jpg" %}') center repeat">
+			<p class = "footertext" id = "toptext">Copyright&#169;2013 Laurel Ann Smith & Kaylynne Nichole Spauls</p>
+			<p class = "footertext">Site by Max Longton Design</p>
+		</div>
+			
+	</body>
+
+</html>

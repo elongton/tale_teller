@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block head %}
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet_login.css" %}">
+		{% block other_libs %}
+		{% endblock %}
+{% endblock %}
+
+{% block center_material %}
+
+	<div id = "center_block">		
+	</div>
+	<div id = "right_block">
+		<div id = "right_block_content">
+			{% block client_rightblock %}
+				<p></p>
+				<h2>Log In</h2>
+				<form action = "/accounts/auth/" method = "post">{%csrf_token %}
+					<label for = "username"> Username:</label>
+					<br>
+					<input type = "text" name = "username" value=""id = "username">
+					
+					<br>
+					<label for = "password">Password:</label>
+					<br>
+					<input type = "password" name = "password" value = "" id = "password">	
+					<br>
+					<input type = "submit" value = "Log In" />			
+				</form>
+				<p id = "blurb">Become a client with Tellers of Tales! <br>Visit our <a href= "/services/">services</a> page to contact us via the submission form.</p>
+			{% endblock %}	
+		</div>
+	
+	</div>
+	
+
+
+	<div id = "content_block">	
+	{% block client_contentblock %}	
+		<div id = "login_book"><img  id = "book" src = "{% static "images/login_page_book.png"%}"/></div>
+	{% endblock %}
+	</div>
+	
+
+{% endblock %}
+
+
+

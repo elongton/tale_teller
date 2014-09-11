@@ -1,0 +1,159 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+{% block client_contentblock %}
+
+<div id = "container">
+    <div id = "outerbox">
+        <div id = "profile_left">
+            <h1 id = "clientname"> {{user_des.creator.get_full_name}} </h1>
+            <hr/>
+            <p id = "blurb">{{user_des.about}}</p>
+
+            <br>
+            <br>
+
+            <h2 id = "transactions" style = "font-family:Centaur">Transactions</h2>
+            <table border = "1" cellpadding = "3" width = 100% cellspacing = "0" id = "transtable">
+            <tr>
+                <td><b>Date</b></td>
+                <td><b>Service</b></td>
+                <td><b>Rate</b></td>
+                <td><b>Pages</b></td>
+                <td><b>Total</b></td>
+                <td><b>Paid</b></td>
+            </tr>
+            {% if transaction %}
+                {% for e in transaction %}
+                <tr>
+                    <td>{{e.date}}</td>
+                    <td>{{e.get_service_display}}</td>
+                    <td>{{e.rate}}</td>
+                    <td>{{e.pages}}</td>
+                    <td>{{e.total}}</td>
+                    <td>{{e.paid}}</td>
+                </tr>
+                {%endfor%}
+
+            {% else %}
+                <tr>
+                    <td colspan = "6">You have no transactions yet.</td>
+                </tr>
+
+            {% endif %}
+
+            </table>
+        </div>
+    </div>
+
+
+
+    <div id = "profile_right">
+
+        {% if user_des.thumbnail %}
+        <p> <img id = "profile_pic" src = '/media/{{user_des.thumbnail}}'/></p>
+        {% endif %}
+
+
+    </div>
+
+</div>
+
+    <div id = "profile_bottom">
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <p>
+        <a href = "{% url 'clients.views.profilepost' %}">Edit Profile</a>
+        </p>
+    </div>
+
+{% endblock %}
+
+
+
+{% block extrastyling %}
+<script type = 'text/javascript' src = "{% static "assets/jss/script_profilepg.js"%}"></script>
+
+<style>
+
+    #outerbox{
+        float: left;
+        width: 100%;
+    }
+    #profile_left{
+        margin-right: 181px;
+
+	}
+	#profile_right{
+        float: left;
+        width: 175px;
+        margin-left: -181px;
+
+	}
+
+	#profile_pic{
+		border-radius: 10px;
+		width: 170px;
+		margin-top:35px;
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+    }
+
+	#transtable{
+	    margin-right: 10px;
+
+	}
+
+	#profile{
+		width:290px;
+	}
+	#profileribbon{
+		left:-30px;
+	}
+	#clientname{
+		font-family: Centaur;
+		margin-bottom: -5px;
+		margin-top: 50px;
+		margin-left:10px;
+        font-weight: normal;
+	}
+	#blurb{
+		margin-left: 10px;
+		font-family: Centaur;
+		font-size: 17px;
+	}
+
+	#transactions{
+		margin-bottom:3px;
+        font-weight: normal;
+	}
+
+
+	hr{
+	height: 1px;
+	background-color: black;
+	}
+
+	#email_div{
+		height:300px;
+		border: 1px solid black;
+        margin-top:35px;
+	    display: block;
+	    margin-left: 10px;
+		}
+
+
+
+	#profile_bottom{
+		clear: both;
+		height: 100px;
+
+	}
+
+</style>
+{% endblock %}
+

@@ -1,0 +1,175 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+
+
+{% block client_contentblock %}
+	<h1 id = "clientname">{{user_des.creator.get_full_name}}</h1>
+    <hr/>
+    {% if user_des.thumbnail %}
+        <p> <img id = "profile_pic" src = '/media/{{user_des.thumbnail}}'/></p>
+    {% endif %}
+    <a  href="{% url 'clients.views.projpost' %}"><button id = "newproj" type="button">New Project</button></a>
+    </br>
+    </br>
+
+    {% for proj in project reversed%}
+
+
+
+        <div class = "titlediv">
+
+
+            <div class = "projdes">
+                <span class = "projectname">{{proj.name}}</span>
+                </br>
+                {{proj.description}}
+            </div>
+
+
+            <div class = "postdraftdiv">
+                <a class = "postdrafbutton" href = "{% url 'clients.views.draftpost' proj.pk %} "><button id = "newdraft" type="button">Post Draft</button></a>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        {%for draf in draft%}
+            {% if draf.project == proj %}
+                <div class = "draftdiv">
+                    <a href = "{{ MEDIA_URL }}{{draf.draft_file}}">{{draf.name}}</a>
+                    <span style = "float: right">{{draf.date}}</span>
+
+                    <div class = "comment_div">
+                        <span style = "font-weight: bold"> {{draf.client}}:</span> {{draf.description}}
+                        </br>
+                        {%for comm in comment%}
+                            {%if comm.draft == draf%}
+                                {%if comm.project == proj%}
+                                    <span style = "font-weight: bold"> {{comm.author}}:</span> {{comm.body}}
+                                    </br>
+                                {%endif%}
+                            {%endif%}
+                        {%endfor%}
+                    </div>
+
+                <a href = "{%url 'clients.views.commpost' draf.pk %} "><button class = "newcomment" type="button">Post Comment</button></a>
+                </div>
+
+            {% endif %}
+
+        {%endfor%}
+
+    {%endfor%}
+
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+    <div class = "heightdiv"></div>
+
+
+
+
+
+{% endblock %}
+
+
+{% block extrastyling %}
+    <style>
+        .titlediv{
+        position: relative;
+        margin-bottom: 10px;
+        background: linear-gradient(white , #F5DC8A 50%);
+        display: inline-block;
+        width: 100%;
+        min-height: 50px;
+        }
+
+        .projdes{
+        margin-left: 20px;
+        font-family: Centaur;
+        width: 80%;
+        float: left;
+        margin-top: 5px;
+        }
+
+        .postdraftdiv{
+        display: table-cell;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-top: 15px;
+        float: right;
+        bottom:0px;
+
+        }
+        .comment_div{
+        margin-left: 10px;
+        font-family: Centaur;
+        }
+        .newcomment{
+        margin-left: -1px;
+        }
+
+        .draftdiv{
+        margin-top: 5px;
+        margin-bottom:5px;
+        margin-left: 20px;
+
+        }
+
+
+        .projectname{
+        font-family: Centaur;
+        font-size: 20px;
+        }
+
+        .draftname{
+        margin-left: 30px;
+        font-family: Centaur;
+        }
+
+
+
+        #newproj{
+        }
+
+        hr{
+        height: 1px;
+        background-color: black;
+        width: 80%;
+        float: left;
+        }
+
+        #profile_pic{
+        float: left;
+        border-radius: 10px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: 10px;
+        margin-bottom:-30px;
+
+        }
+
+        #clientname{
+        font-family: Centaur;
+        margin-bottom: -5px;
+        margin-top: 50px;
+        margin-left:10px;
+        font-weight: normal;
+        }
+
+        #projects{
+        width:290px;
+        }
+        #projectsribbon{
+        left:-30px;
+        }
+    </style>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+
+{% block client_contentblock %}
+<h1 id = "title">News and Updates</h1>
+<hr/>
+
+    {%for art in article%}
+            <div class = "title_div">
+                <h3 class = "article_title">{{art.title}}</h3>
+                 <p style = "font-size = 10px; font-family: Centaur; margin:0px">  {{art.date}}</p>
+
+            </div>
+
+            <div class = "article_div">
+                {%if art.picture %}
+                    {%if art.leftright == "R" %}
+                        <div style = "float: right; margin-left: 5px">
+                            <img  class = "newspic" src = "/media/{{art.picture}}" />
+                            <div style = "text-align: center">{{art.caption}}</div>
+                        </div>
+                    {%else%}
+                        <div style = "float: left; margin-right: 5px">
+                            <img  class = "newspic" src = "/media/{{art.picture}}" />
+                            <div style = "text-align: center">{{art.caption}}</div>
+                        </div>
+                    {%endif%}
+                {%endif%}
+                {{art.body}}
+            </div>
+    {%endfor%}
+
+    <div class = "heightdiv"></div>
+
+{% endblock %}
+
+
+{% block extrastyling %}
+<style>
+.article_title{
+    margin-top: 0px;
+    margin-bottom:0px;
+    font-family: Centaur;
+    font-weight: normal;
+    }
+.title_div{
+    margin-top: 0px;
+
+    }
+
+.newspic{
+    height: 200px;
+    }
+
+.article_div{
+    font-family: Centaur;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    }
+
+#title{
+    font-family: Centaur;
+    margin-top: 50px;
+    font-weight: normal;
+}
+hr{
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-left: -5px;
+    margin-top: -20px;
+}
+
+
+#news{
+width:290px;
+}
+#newsribbon{
+left:-30px;
+}
+
+</style>
+{% endblock %}

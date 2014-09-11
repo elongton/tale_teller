@@ -1,0 +1,77 @@
+
+
+#right_block{
+height: 2200px;
+background-color: #F5DC8A;
+width:280px;
+float: right;
+margin-top:2px;
+margin-right:-10px;
+position:relative;
+
+}
+
+
+.ribbon{
+margin-top: 5px;
+margin-left: 10px;
+position:relative;
+}
+
+.ribbon_specs{
+
+width: 260px;
+height: 40px;
+}
+
+.link_text{
+width:230px;
+position: absolute;
+margin-left: 5px;
+margin-top: -40px;
+}
+
+#right_block_content{
+margin-top: 90px;
+margin-left:30px;
+margin-right: 10px;
+}
+
+
+#news_updates{
+
+}
+
+#profile{
+top: 50px;
+}
+
+#projects{
+top: 100px;
+}
+
+#authorforums{
+top: 150px;
+
+}
+/* 
+#message{
+top: 200px;
+
+} */
+
+#authorpage{
+top: 200px;
+
+}
+
+#logout{
+top: 250px;
+
+}
+
+#ribbon{
+top: 20px;
+
+}
+

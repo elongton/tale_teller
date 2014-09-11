@@ -1,0 +1,7 @@
+{% extends "login.html" %}
+{% load static %}
+
+{% block client_rightblock %}
+	<h2>Hi {{full_name}} you are now logged in!</h2>
+	<p> Click <a href = "/accounts/logout/">here</a> to logout.</p>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html> 
+
+	<head> 
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "assets/css/stylesheet.css" %}">
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "assets/css/stylesheet_home.css" %}">
+		
+<!-- 	<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+		<script type = 'text/javascript' src = 'jquery.animate-colors-min.js'></script>
+		<script type = 'text/javascript' src = 'script.js'></script> -->
+		<title>
+		Tellers Of Tales
+		</title>
+		<link rel="shortcut icon" href="{% static "assets/images/tab_icon5.png" %}">
+	</head>
+	
+	
+	<body>	
+		<script src="jquery.js"></script>
+
+		<div id = "top_block" style = "background:url('{% static "assets/images/leather_header3.jpg" %}') center repeat">
+			<div id = "header_block">
+				<table id = "header_table">
+					<tr>
+						<td rowspan = "2" id = "img_cell">
+							<a href = "index.html"><img id = "logo" src = "{% static "assets/images/icon.png"%}"/></a>
+						</td> 
+						<td class = "toprow"></td>
+						<td colspan = "4" class = "toprow" id = "title_cell"><div id = "big_title"><img id = "title_pic" src = "{% static "assets/images/title_text.png"%}"/></div></td>
+					</tr>
+					
+					
+					<tr class = "bottomrow1">
+						<td class = "bottomrow">
+							<a class = "headerlinks" href = "index.html"><div class =  "title_text">Home</div></a>
+						</td>
+						
+						<td class = "bottomrow">
+							<a class = "headerlinks" href = "credentials.html"><div class =  "title_text">Who we are</div></a>
+						</td>
+						
+						<td class = "bottomrow">
+							<a class = "headerlinks" href = "testimonials.html"><div class =  "title_text">Testimonials</div></a>
+						</td>
+						
+						<td class = "bottomrow">
+							<a class = "headerlinks" href = "services.html"><div class =  "title_text">Services</div></a>
+						</td>
+						
+						<td class = "bottomrow" id = "resource_button">
+							<a class = "headerlinks" href = "resources.html"><div class =  "title_text">Resources</div></a>
+						</td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+			
+		<div id = "center_block">
+			<div id = "right_block">
+				{% block right_block %}			
+				{% endblock %}
+			</div>
+			
+			
+			<div id = "content_block">	
+				{% block content_block %}
+				{% endblock %}
+			</div>	
+		</div>
+			
+			
+		<div id = "footer_block" style = "background:url('{% static "assets/images/leather_header3.jpg" %}') center repeat">
+			<p class = "footertext" id = "toptext">Copyright&#169;2013 Laurel Ann Smith & Kaylynne Nichole Spauls</p>
+			<p class = "footertext">tellersoftales.lsmith@gmail.com</p>
+			<p class = "footertext">tellersoftales.kspauls@gmail.com</p>
+		</div>
+			
+	</body>
+
+</html>

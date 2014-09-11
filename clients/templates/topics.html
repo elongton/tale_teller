@@ -1,0 +1,135 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+
+
+{% block client_contentblock %}
+
+
+    <h1 id = "forum_title">{{forum_name.title}}</h1>
+    <hr/>
+
+	<!--Threads -->
+	<br />
+	<br />
+    <div class = "header_bar">
+        <div class = "button" id = "newthread_button"><a id = "new_thread" class="buttont" href="{% url 'clients.views.posts' 'new_thread' pk %}"><span>New thread</span></a></div>
+        <div class = "button" id = "back_button"><a href = "/clients/forums/"><span id = "back_horiz">Back</span></a></div>
+	</div>
+
+    <br />
+	<br />
+    <br />
+
+
+
+    {% for thread in threads.object_list %}
+        <a class = "thread_links" href="{% url 'clients.views.threads' thread.pk %}">
+            <div class ="thread_buttons">
+                <div class="title"><span class = "thread_name">{{ thread.title }}</span></div>
+                <div class = "posts"><span class = "thread_name">{{ thread.num_posts}}{%if thread.num_posts == 1 %} Post{%else%} Posts{%endif%}</span></div>
+            </div>
+        </a>
+    {% endfor %}
+
+<div class = "heightdiv"></div>
+{% endblock %}
+
+
+
+
+
+{% block extrastyling %}
+<style>
+	#authorforums{
+	width:290px;
+	}
+	#forumsribbon{
+	left:-30px;
+	}
+
+    #forum_title{
+        font-family: Centaur;
+		margin-top: 50px;
+        font-weight: normal;
+    }
+
+    hr{
+		height: 1px;
+		background-color: black;
+		width: 70%;
+		margin-left: -5px;
+		margin-top: -10px;
+	}
+
+    .button{
+		background: linear-gradient(white , #F5DC8A 50%);
+		position: relative;
+	}
+
+    #newthread_button{
+        width: 100px;
+        height: 30px;
+        font-family: Centaur;
+        color: black;
+        float:left;
+    }
+    #new_thread{
+        text-decoration: none;
+    }
+
+    span{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-top: 7px;
+        text-decoration: none;
+        color: black;
+	}
+	.title{
+	    float: left;
+	}
+	.posts{
+	    float: right;
+	}
+
+    .thread_buttons{
+        height: 50px;
+        margin-top: 10px;
+        background: linear-gradient(white , #F5DC8A 50%);
+        position: relative;
+
+    }
+
+    .thread_links{
+        text-decoration: none;
+        color: black;
+        font-family: Centaur;
+        font-size: 22px;
+
+    }
+    .thread_name{
+        display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-top: 12px;
+        margin-right:12px;
+
+    }
+
+    #back_button{
+    width: 75px;
+    float: right;
+    font-family: Centaur;
+    height: 30px;
+    }
+
+    #back_horiz{
+    margin-left: 21px;
+
+    }
+</style>
+
+<script type = 'text/javascript' src = "{% static "assets/jss/script_forums.js"%}"></script>
+{% endblock %}

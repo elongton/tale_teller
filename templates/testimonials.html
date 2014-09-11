@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block head %}	
+	<link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet_testimonials.css" %}">
+{% endblock %}
+
+{% block center_material %}
+
+	<div id = "center_block">
+	</div>
+	<div id = "right_block">
+		<div class = "bookcover_box" id = "top_book">
+			<a href = "http://www.amazon.com/gp/product/1480007838?ie=UTF8&tag=httpwwwgoodco-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1480007838&SubscriptionId=1MGPYB6YW3HWK55XCGG2"><img class = "bookcover" src = "{% static "images/the_sirens.jpg"%}" /></a>
+		</div>
+		
+		<div class = "bookcover_box">
+			<a href = "http://www.barnesandnoble.com/w/izzy-and-brynn-kaylynne-spauls/1117480456?ean=9781629945897&itm=1&usri=9781629945897&cm_mmc=AFFILIATES-_-Linkshare-_-GwEz7vxblVU-_-10:1&r=1,%201"><img class = "bookcover" src = "{% static "images/izzy&brynn.jpg"%}" /></a>
+		</div>
+		
+		<div class = "bookcover_box">
+			<a href = "http://www.amazon.com/Shadowing-A-Henchmans-Tale-Moonblind-ebook/dp/B00545W2IY/ref=sr_1_fkmr0_1?ie=UTF8&qid=1387167334&sr=8-1-fkmr0&keywords=the+shadowing+a+henceman%27s+tale"><img class = "bookcover" src = "{% static "images/shadowing.jpg"%}" /></a>
+		</div>
+		
+		<div class = "bookcover_box">
+			<a href = ""><img class = "bookcover" src = "{% static "images/the_untamed.jpg"%}" /></a>
+		</div>
+	</div>
+
+
+	<div id = "content_block">		
+		<div class = "notes"> 
+			<div id = "profile1_box"> 
+				<a href = "https://www.facebook.com/katzantow"><img id = "profile1" src = "{% static "images/kat_zantow.jpg"%}" /></a>
+			</div>
+			<a id = "authorlink" href = "https://www.facebook.com/katzantow"><h3 class = "author_name">Kat Zantow</h3></a>
+				<p>
+				I have worked with Teller of Tales for short fiction, and always had a great experience! Their turn around time is prompt and their interactions friendly and professional. Their line editing service clean up the stray bits that slip through your radar when you write a story. They picked up grammar and word choice things that I had missed, as well as ambiguous phrases. They also provide some suggestions for revision going forward. Above all, they revitalized my interest in a stalled project!
+				</p>
+        </div>
+			
+			
+		<!--
+		<div class = "notes"> 
+			<div id = "profile2_box"> 
+				<img id = "profile2" src = "author_photo.png" />
+			</div>
+			<a id = "authorlink" href = "https://www.facebook.com/katzantow"><h3 id = "right_author" class = "author_name">Author Name</h3></a>
+			
+			<p style = "margin-top: 60px; position: auto">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula.  Pellentsque aliquam quam vel dolor.  Nunc adipiscing.  Sed quam odio, tempus ac, aliquam melestie, varius ac, tellus.  Vestibulum ut nulla aliquam risus rutrum interdum.
+			Pellentesque lorem.  Curabitur sit amet erate quis risus feugiat viverra.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula.  Pellentsque aliquam quam vel dolor.  Nunc adipiscing.  Sed quam odio, tempus ac, aliquam melestie, varius ac, tellus.  Vestibulum ut nulla aliquam risus rutrum interdum.
+			Pellentesque lorem.  Curabitur sit amet erate quis risus feugiat viverra. 
+			</p>
+		</div>
+		
+		<div id = "thirdbox" class = "notes"> 
+			<div id = "profile3_box"> 
+				<img id = "profile3" src = "ernest.jpg" />
+			</div>
+			<h3 class = "author_name">Author Name</h3>
+		
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula.  Pellentsque aliquam quam vel dolor.  Nunc adipiscing.  Sed quam odio, tempus ac, aliquam melestie, varius ac, tellus.  Vestibulum ut nulla aliquam risus rutrum interdum.
+				Pellentesque lorem.  Curabitur sit amet erate quis risus feugiat viverra.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula.  Pellentsque aliquam quam vel dolor.  Nunc adipiscing.  Sed quam odio, tempus ac, aliquam melestie, varius ac, tellus.  Vestibulum ut nulla aliquam risus rutrum interdum.
+				Pellentesque lorem.  Curabitur sit amet erate quis risus feugiat viverra. 
+			</p>
+		
+		</div>
+		-->
+		
+	</div>
+{% endblock %}

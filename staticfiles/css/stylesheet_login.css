@@ -1,0 +1,48 @@
+#content_block{
+float: left;
+margin-top:100px;
+background-color:#F5F2E9;
+z-index:1;
+width:920px;
+position:absolute;
+left:50%;
+margin-left:-460px;
+position:relative;
+display:inline-block;
+/* border:1px dashed black; */
+}
+
+#right_block{
+background-color: #F5DC8A;
+height:900px;
+width:300px;
+float: right;
+margin-top:2px;
+margin-right:-10px;
+position:relative;
+}
+
+#right_block_content{
+height: 200px;
+margin-left:30px;
+margin-right: 10px;
+}
+
+#login_book{
+width: 400px;
+margin: 0 auto; 
+margin-top: 50px;
+}
+
+#book{
+margin-top: 20px;
+max-width:100%;
+}
+
+
+
+#blurb{
+margin-right: 10px;
+}
+
+/* margin: 0 auto; */

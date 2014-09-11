@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block head %}
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet_resources.css" %}">
+{% endblock %}
+
+{% block center_material %}
+	<div id = "center_block">
+	</div>
+	<div id = "right_block">
+		<div id = "goodreads_title"> 	
+			<a href = "http://www.goodreads.com/"><img id = "goodreads_logo" style = "max-width: 100%; max-height:100%;" src ="{% static "images/goodreads_logo.png"%}"/></a>
+		</div>
+		
+		<div class = "RSS_box" id = "topRSS">
+			<a href = "https://owl.english.purdue.edu/"><img id = "logo_img" src ="{% static "images/owl_perdue.png"%}" /></a>
+		</div>
+		
+		<div class = "RSS_box" id = "sfwa">
+			<a href = "http://www.sfwa.org/"><img id = "logo_img" src ="{% static "images/sfwa.png"%}" /></a>
+		</div>
+	</div>
+
+
+
+
+	<div id = "content_block">		
+		<p id = "intro" class = "notes"> 
+		As a new or self-publishing author, it is important to have as many resources as possible at your disposal. Of course, you will always have Tellers of Tales to help you, but there are so many other great resources available online and in print that we thought we would include some of them in one location for you.
+		</p>
+		<h3 class = "text_titles">Writing Resources</h3>
+		<div class = "notes">
+			<p>These websites and books will help you develop your skills as a writer and self-editor.</p>	
+			<p><a href = "www.owlpurdue.com"> www.owlpurdue.com</a></p>
+		</div>
+		<h3 class = "text_titles">Writers' Organizations</h3>
+		<div class = "notes">
+		<p>
+		Know your community! If there is one thing writers do well, it is looking after each other. These organizations provide great advice for acheiving publication and for self-promotion.
+		</p>
+		<p><a href = "www.sfwa.org">www.sfwa.org</a></p>
+		<p>Writer's Beware: <a href = "http://accrispin.blogspot.com/"> http://accrispin.blogspot.com/</a></p>
+		
+		
+		</div>
+		<h3 class = "text_titles">Author Pages</h3>
+		<div class = "notes">
+		<p>Contact other authors! These are people who we have worked with before and have their own tips from a writer's perspective.</p>
+		<p>www.tellers-of-tales.com/kaylynnespauls</p>
+		</div>
+		
+	</div>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+
+{% block client_contentblock %}
+<h1 id = "forum_title">Author Forums</h1>
+<hr/>
+
+		{% for forum in forums %}
+			<a class = "forum_links" href="{% url 'clients.views.topics' forum.pk %}"><div class="button"><span>{{ forum.title }}</span></div></a>
+			<p class = "description">
+			{{forum.description}}
+			</p>
+		{% endfor %}
+
+
+    <div class = "heightdiv"></div>
+{% endblock %}
+
+
+
+
+
+{% block extrastyling %}
+<script type = 'text/javascript' src = "{% static "assets/jss/script_forums.js"%}"></script>
+
+<style>
+	#authorforums{
+		width:290px;
+
+	}
+	#forumsribbon{
+		left:-30px;
+	}
+	#forum_title{
+		font-family: Centaur;
+		margin-top: 50px;
+        font-weight: normal;
+	}
+	hr{
+		height: 1px;
+		background-color: black;
+		width: 80%;
+		margin-left: -5px;
+		margin-top: -20px;
+	}
+
+	.button{
+		width: 100%;
+		height:50px;
+		background: linear-gradient(white , #F5DC8A 50%);
+		position: relative;
+	}
+
+	.forum_links{
+		text-decoration: none;
+		font-family: Centaur;
+		font-size: 25px;
+		color: black;
+	}
+
+	span{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-top: 12px;
+	}
+
+	.description{
+		margin-left: 40px;
+
+	}
+</style>
+{% endblock %}

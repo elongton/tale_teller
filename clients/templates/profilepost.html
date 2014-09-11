@@ -1,0 +1,45 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+{% block client_contentblock %}
+
+	<div class="main">
+		<div id="reply">
+			<div id="rtitle"><h2>{{ title }}</h2></div><br />
+
+			<form action="newprofile/" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+			    Biography:<br/><textarea name="descrip" id="body"></textarea><br />
+                Profile Picture:  <input type="file" name="profilepic" />
+				<input type="submit" value="Submit" id="submit" />
+			</form>
+
+		</div>
+	</div>
+
+{% endblock %}
+
+
+{% block extrastyling %}
+<style>
+	#projects{
+	width:290px;
+	}
+	#profileribbon{
+	left:-30px;
+	}
+
+    #rtitle{
+        font-family: Centaur;
+        margin-top: 50px;
+        margin-bottom: -30px;
+
+    }
+
+    #body{
+    height: 100px;
+    width: 80%;
+
+    }
+</style>
+{% endblock %}

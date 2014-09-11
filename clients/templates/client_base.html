@@ -1,0 +1,67 @@
+{% extends "login.html" %}
+{% load static %}
+
+{% block other_libs %}
+		<link rel = "stylesheet" type = "text/css"  href = "{% static "css/stylesheet_client_base.css" %}">
+		<script type = 'text/javascript' src = "{% static "jss/script_clients.js"%}"></script>
+		{% block extrastyling %}
+		{% endblock %}
+{% endblock %}
+
+
+{% block client_rightblock %}
+
+	<a href = "/clients/news/">
+	<div class = "ribbon" id = "newsribbon">
+		<img  class = "ribbon_specs"  id = "news" src = "{% static "images/longer_ribbon.png"%}"/>
+		<img class = "link_text" src = "{% static "images/news_text.png"%}"/>
+	</div>
+
+	<a href = "/clients/profile/">
+	<div class = "ribbon" id = "profileribbon">
+		<img  class = "ribbon_specs"  id = "profile" src = "{% static "images/longer_ribbon.png"%}"/>
+		<img class = "link_text" src = "{% static "images/profile_text.png"%}"/>
+	</div>
+	</a>
+	
+	<a href = "/clients/projects/">
+	<div class = "ribbon" id = "projectsribbon">
+		<img  class = "ribbon_specs"  id = "projects" src = "{% static "images/longer_ribbon.png"%}"/>
+		<img class = "link_text" src = "{% static "images/projects_text.png"%}"/>
+	</div>
+	</a>
+	
+	<a href = "/clients/forums/">
+	<div class = "ribbon" id = "forumsribbon">
+		<img  class = "ribbon_specs" id = "authorforums" src = "{% static "images/longer_ribbon.png"%}"/>
+		<img class = "link_text" src = "{% static "images/authorforums_text.png"%}"/>
+	</div>
+	</a>
+
+<!-- 	<a href = "/clients/message/">
+	<div class = "ribbon" id = "messageribbon">
+		<img  class = "ribbon_specs"  id = "message" src = "{% static "images/longer_ribbon.png"%}"/>
+		<img class = "link_text" src = "{% static "images/message_text.png"%}"/>
+	</div>
+	</a> -->
+	
+	<a href = "/clients/authorpage/">
+	<div class = "ribbon" id = "authorpageribbon">
+		<img  class = "ribbon_specs"  id = "authorpage" src = "{% static "images/longer_ribbon.png"%}"/>
+		<img class = "link_text" src = "{% static "images/authorpage_text.png"%}"/>
+	</div>
+	</a>
+	
+	<a href = "/accounts/logout/">
+		<div class = "ribbon" id = "logoutribbon">
+			<img  class = "ribbon_specs"  id = "logout" src = "{% static "images/longer_ribbon.png"%}"/>
+			<img class = "link_text" src = "{% static "images/logout_text.png"%}"/>
+		</div>
+	</a>
+		
+{% endblock %}
+
+
+{% block client_contentblock %}
+<h1>Welcome, and congratulations on being a client!</h1>
+{% endblock %}

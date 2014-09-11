@@ -1,0 +1,115 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+{% block client_contentblock %}
+
+	<h1><div class= "title">{{ title }}</div></h1>
+    <hr/>
+	<div id="list">
+
+		{% for post in posts.object_list %}
+
+        <div class = "post_box">
+            <div class = "post_box_top">
+                <div class = "post_title">{{post.title}}</div>
+                <div class = "client_name">{{post.creator}}</div>
+                <div class = "post_body">{{post.body}}</div>
+            </div>
+            <div class = "post_date">{{post.created}}</div>
+
+
+        </div>
+
+		{% endfor %}
+	</div>
+
+<!-- Next/Prev page links -->
+	{% if threads.object_list and threads.paginator.num_pages > 1 %}
+	<div class = "pagination">
+		<span class = "step-links">
+			{% if threads.has_previous %}
+				<a href= "?page={{ threads.previous_page_number}}">previous &lt;&lt; </a>
+			{% endif %}
+			
+			<span class="current">
+				&nbsp;Page {{ threads.number }} of {{ threads.paginator.num_pages }}
+			</span>
+			
+			{% if threads.has_next %}
+				<a href="?page={{ threads.next_page_number}}"> &gt;&gt; next</a>
+			{% endif %}
+		</span>
+	</div>
+	{% endif %}
+ 
+	 <div id = "replybutton"><a class="button" href="{% url 'clients.views.posts' 'reply' pk %}">Reply</a></div>
+	 <br><br>
+     <div id = "backbutton"><a href = "{% url 'clients.views.topics' forum_pk %}">Back</a></div>
+
+
+    <div class = "heightdiv"></div>
+{% endblock %}
+
+
+
+
+{% block extrastyling %}
+<style>
+#authorforums{
+width:290px;
+}
+#forumsribbon{
+left:-30px;
+}
+
+.title{
+    font-family: Centaur;
+    margin-top: 50px;
+    font-weight: normal;
+}
+hr{
+    height: 1px;
+    background-color: black;
+    width: 70%;
+    margin-left: -5px;
+    margin-top: -10px;
+}
+.post_box{
+    width: 80%;
+    border: 1px solid black;
+    margin-top: 20px;
+    box-shadow: 4px 6px 5px #888888;
+    }
+
+.client_name{
+    float: right;
+    margin-right: 10px;
+    font-family: Centaur;
+    }
+.post_title{
+    float: left;
+    font-size: 20px;
+    font-family: Centaur;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    }
+.post_body{
+    clear: both;
+    font-family: Centaur;
+    margin-left: 15px;
+    margin-right: 10px;
+    }
+.post_date{
+    margin-top: 20px;
+    font-family: Centaur;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    }
+
+    #replybutton{
+    margin-top: 20px;
+    }
+</style>
+{% endblock %}

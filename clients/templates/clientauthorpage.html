@@ -1,0 +1,54 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+
+
+{% block client_contentblock %}
+<h1 id = "title">Author Page</h1>
+<hr/>
+
+</br>
+</br>
+</br>
+<img id = "underconstruction" src = "{% static "images/under_construction2.png"%}" />
+{% endblock %}
+
+
+
+
+
+{% block extrastyling %}
+<style>
+
+#underconstruction{
+    width: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+
+#title{
+    font-family: Centaur;
+    margin-top: 50px;
+    font-weight: normal;
+}
+hr{
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-left: -5px;
+    margin-top: -20px;
+}
+
+#authorpage{
+width:290px;
+}
+
+#authorpageribbon{
+left:-30px;
+}
+
+</style>
+{% endblock %}

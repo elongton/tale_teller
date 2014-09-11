@@ -1,0 +1,49 @@
+{% extends "client_base.html" %}
+{% load static %}
+
+
+
+
+{% block client_contentblock %}
+	
+	<div class="main">
+		<div id="reply">
+			<div id="rtitle"><h2>{{ title }}</h2></div><br />
+
+			<form action="{{ action }}" method="POST"> {% csrf_token %}
+				Subject:<br/> <input type="text" name="subject" size="60" value="{{ subject }}" /><br /><br />
+			    <textarea name="body" id="body"></textarea><br />
+				<input type="submit" value="Submit" id="submit" />
+			</form>
+
+		</div>
+	</div>
+    <div class = "heightdiv"></div>
+{% endblock %}
+
+
+{% block extrastyling %}
+<style>
+	#authorforums{
+	width:290px;
+    font-weight: normal;
+	}
+	#forumsribbon{
+	left:-30px;
+	}
+
+    #rtitle{
+        font-family: Centaur;
+        margin-top: 50px;
+        margin-bottom: -30px;
+        font-weight: normal;
+
+    }
+
+    #body{
+    height: 200px;
+    width: 80%;
+
+    }
+</style>
+{% endblock %}
