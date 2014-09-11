@@ -81,8 +81,9 @@ def reply(request, pk):
 @login_required(login_url = '/accounts/login/')
 def client_profile(request):
     des = {}
-    des['transaction'] = services(request)
-    des['user_des'] = description(request)
+    if description is not None:
+        des['transaction'] = services(request)
+        des['user_des'] = description(request)
     return render_to_response('clientprofile.html', des)
 
 

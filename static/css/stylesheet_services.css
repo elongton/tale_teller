@@ -43,7 +43,13 @@ position:absolute;
 max-width: 250px;
 }
 
+#id_name{
+max-width: 200px;
+}
 
+#id_email{
+max-width: 200px;
+}
 
 #goodreads_title{
 

@@ -8,7 +8,12 @@
         <div id = "profile_left">
             <h1 id = "clientname"> {{user_des.creator.get_full_name}} </h1>
             <hr/>
+
+            {% if user_des.about %}
             <p id = "blurb">{{user_des.about}}</p>
+            {% else %}
+            <p>You have not uploaded a description.</p>
+            {% endif %}
 
             <br>
             <br>
@@ -52,6 +57,9 @@
 
         {% if user_des.thumbnail %}
         <p> <img id = "profile_pic" src = '/media/{{user_des.thumbnail}}'/></p>
+        {% else %}
+
+        <p>No profile uploaded.</p>
         {% endif %}
 
 

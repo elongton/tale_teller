@@ -38,6 +38,9 @@ def services(request):
     else:
         loggedin = False
 
+    args = {}
+    args['submitted'] = request.session['submitted']
+
 
     if request.method == 'POST':
         form = User_inputForm(request.POST, request.FILES)
@@ -45,11 +48,11 @@ def services(request):
             submitted = 1
             request.session['submitted'] = submitted
             form.save()
-            # return HttpResponseRedirect('')
+
+            # return HttpResponseRedirect('/services/')
     else:
         form = User_inputForm()
-
-    args = {}
+        args['submitted'] = 'none'
     args.update(csrf(request))
     args['form'] = form
     args['loggedin'] = loggedin
