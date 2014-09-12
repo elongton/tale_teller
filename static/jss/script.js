@@ -143,22 +143,38 @@ $(document).ready(function(){
 	
 	
 //scrolling to links on services page
-	$('#IE_link').click(function(){	
-		$.scrollTo('+=250px', 500, { axis:'y' });
+
+//calculate pixel locations
+var IE = $('#ind_editing').offset().top - 110;
+var CC = $('#crea_consult').offset().top - 110;
+var MP = $('#mark_pro').offset().top - 110;
+var P = $('#pricing').offset().top - 110;
+
+IE = "+=" + IE.toString() + "px";
+CC = "+=" + CC.toString() + "px";
+MP = "+=" + MP.toString() + "px";
+P = "+=" + P.toString() + "px";
+
+//$('.notes').text(IE);
+
+
+	$('#IE_link').click(function(){
+		$.scrollTo(IE, 500, { axis:'y' });
 	});
-	
-		$('#CC_link').click(function(){	
-		$.scrollTo('+=980px', 1200, { axis:'y' });
+
+		$('#CC_link').click(function(){
+		$.scrollTo(CC, 1200, { axis:'y' });
 	});
-	
-		$('#MP_link').click(function(){	
-		$.scrollTo('+=1420px', 1500, { axis:'y' });
+
+		$('#MP_link').click(function(){
+		$.scrollTo(MP, 1500, { axis:'y' });
 	});
-	
-		$('#P_link').click(function(){	
-		$.scrollTo('+=1420px', 1500, { axis:'y' });
+
+		$('#P_link').click(function(){
+		$.scrollTo(P, 1500, { axis:'y' });
 	});
-	
+
+
 	$('.topreturn').click(function(){	
 		var marg = $(document).scrollTop();
 		var time = 0;

@@ -12,9 +12,8 @@ from django.core.context_processors import csrf
 
 def description(request):
     user = request.user
-    if Description is not None:
-        user_des = Description.objects.get(creator=user.id)
-        return user_des
+    user_des = Description.objects.get(creator=user.id)
+    return user_des
 
 def services(request):
     user = request.user

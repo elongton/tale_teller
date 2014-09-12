@@ -39,7 +39,7 @@ def services(request):
         loggedin = False
 
     args = {}
-    args['submitted'] = request.session['submitted']
+
 
 
     if request.method == 'POST':
@@ -47,6 +47,7 @@ def services(request):
         if form.is_valid():
             submitted = 1
             request.session['submitted'] = submitted
+            args['submitted'] = request.session['submitted']
             form.save()
 
             # return HttpResponseRedirect('/services/')

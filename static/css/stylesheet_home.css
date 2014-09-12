@@ -22,6 +22,13 @@ position:relative;
 }
 
 
+
+
+
+
+
+
+
 #goodreads_title{
 
 height:50px;
@@ -74,8 +81,6 @@ font-family:Andalus;
 font-weight:200;
 }
 #third_paragraph{
-margin-bottom:500px;
-
 }
 
 .text_titles{
@@ -90,6 +95,29 @@ line-height:150%;
 
 }
 
+
+#free_trial_div{
+margin-bottom: 350px;
+margin-top: 40px;
+font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
+
+#free_trial_container{
+font-size: 25px;
+font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+color: #4F2D12;
+}
+
+#hr_trial_line{
+border-color: #4F2D12;
+margin-top: -15px;
+
+}
+
+#email{
+font-size: 20px;
+color: #4F2D12;
+}
 
 
 

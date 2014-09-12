@@ -10,8 +10,6 @@ $(document).ready(function(){
 		$('#profile_left').css('width', size);
 	});
 
-
-
 	
 });
 
