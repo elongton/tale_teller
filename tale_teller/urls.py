@@ -12,6 +12,7 @@ urlpatterns = patterns('',
 	
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^home/$', 'tale_teller.views.home'),
+    url(r'^$', 'tale_teller.views.home'),
 	url(r'^bio/$', 'tale_teller.views.bio'),
 	url(r'^testimonials/$', 'tale_teller.views.testimonials'),
 	url(r'^services/$', 'tale_teller.views.services'),
