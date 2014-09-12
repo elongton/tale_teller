@@ -145,10 +145,10 @@ $(document).ready(function(){
 //scrolling to links on services page
 
 //calculate pixel locations
-var IE = $('#ind_editing').offset().top - 150;
-var CC = $('#crea_consult').offset().top - 150;
-var MP = $('#mark_pro').offset().top - 150;
-var P = $('#pricing').offset().top - 150;
+var IE = $('#ind_editing').offset().top - 110;
+var CC = $('#crea_consult').offset().top - 110;
+var MP = $('#mark_pro').offset().top - 110;
+var P = $('#pricing').offset().top - 110;
 
 IE = "+=" + IE.toString() + "px";
 CC = "+=" + CC.toString() + "px";
