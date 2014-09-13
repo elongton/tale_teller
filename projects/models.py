@@ -37,9 +37,3 @@ class Comment(models.Model):
     def __unicode__(self):
         return unicode(self.draft)
 
-
-
-admin.site.register(Project)
-admin.site.register(Draft)
-admin.site.register(Comment)
-
